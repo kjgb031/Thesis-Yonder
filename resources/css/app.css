@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 
 .cinzel-normal {
@@ -174,14 +175,14 @@ section {
 .pageTwo {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures full viewport height */
+    min-height: 100vh; 
     padding: 20px;
 }
 .center {
     display: flex;
-    align-items: center; /* Centers vertically */
-    justify-content: center; /* Centers horizontally */
-    flex-grow: 1; /* Takes up remaining space */
+    align-items: center; 
+    justify-content: center; 
+    flex-grow: 1;
     width: 100%;
 }
 .card-container {
@@ -200,7 +201,7 @@ section {
     justify-content: center;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 /* Adjust gaps for desktop */
@@ -549,9 +550,18 @@ footer a{
     align-items: center;
     gap: 1rem;
 }
-
+.slide-nav{
+    display: none;
+}
 /* iphone 16 pro max view*/
 @media(max-width: 852px) {
+    
+    html, body {
+        overflow-x: hidden; 
+        margin: 0;
+        padding: 0;
+        width: 100vw; 
+    }
     header{
         height: 5.344dvh;
         display: flex;
@@ -561,6 +571,7 @@ footer a{
         padding-left: 0%;
         padding-right: 0%;
         flex: 1;
+        position: fixed;
     }
     section {
         display: block;
@@ -646,13 +657,16 @@ footer a{
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        
     }
     .card {
         width: 23rem;
         height: 9.8rem;
+        
     }
     .card1, .card2, .card3, .card4 {
         margin: 0; 
+        margin-bottom: 1rem;
     }
     .cardOne-top h1{
         font-size: 1.25rem !important;
@@ -705,6 +719,195 @@ footer a{
     .cardFour-bottom {
         font-size: 1rem !important;
         
+    }
+    .card img{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .dividerOne, .dividerTwo{
+        height: 3.5rem;
+        font-size: 1.25rem;
+        width: 120vw;
+        transform: translateX(-10px);
+        margin-top: 5rem;
+        overflow-x: hidden;
+    }
+    .dividerOne{
+        rotate: 5deg;
+    }
+    .dividerTwo{
+        rotate: -10deg;
+    }
+
+    /* page three container*/
+    .pageThree-container{
+        width: 23rem;
+        height: 15rem;
+        padding: 0.4rem;
+    }
+    .pageThree-top{
+        padding-top: 1rem;
+        font-size: 1rem;
+    }
+    .pageThree-middle{
+        font-size: 1rem;
+    }
+    .pageThree-bottom{
+        flex-direction: row-reverse;
+        gap: 0rem;
+        padding-right: 0rem;
+        font-size: 16px;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        gap: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 1rem;
+    }
+    .pageThree-bottom img{
+        height: 23.3px;
+        width: 23.3px;
+
+    }
+    .pageThree{
+        padding-bottom: 7rem;
+        height: 80dvh;
+    }
+
+
+    /* FOOTER */
+    footer{
+        height: 8.25rem;
+    }
+    .footerThree{
+        display: none;
+    }
+    .footerGetStarted{
+        display: none;
+    }
+    .footerFour{
+        flex: 1;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerFour h1{
+        font-size: 1rem;
+    }
+    .footerFour img{
+        height: 57px;
+        width: 43px;
+    }
+    .footerGetHelp{
+        flex: 1;
+        justify-content: center;
+    }
+    .footerOne{
+        flex: 1;
+    }
+
+    .footerUniTrade h3{
+        font-size: 13px;
+    }
+    .footerGetHelp h3{
+        font-size: 13px;
+    }
+    footer ul{
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+        font-size: 12px;
+    }
+    /* SLIDE NAV */
+    .slide-nav{
+        display: block;
+    }
+    .slide-nav{
+        top: 0%;
+        height: 100dvh;
+        width: 1000dvh;
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+        backdrop-filter: blur(10px); 
+        position: fixed;
+        visibility: hidden;
+        transition: left 0.1s ease-in-out;
+        left: -100%;
+        z-index: 100000;
+        overflow:hidden;
+
+    }
+    .slide-nav.active {
+        left: 0;
+        visibility: visible;
+    }
+    .nav-content{
+        position: relative;
+        color: white;
+        height: 100%;
+        width: 20.24rem;
+        background: rgb(174,5,5);
+        background: linear-gradient(180deg, rgba(174,5,5,1) 0%, rgba(72,2,2,1) 100%);
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .nav-uniTradeTop{
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5.344dvh;
+    
+    }
+    .nav-uniTradeTop img{
+        position: absolute;
+        left: 8%;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+    .nav-uniTradeTop h1{
+        color:#AE0505;
+        font-size: 1rem;
+    }
+    .slide-top,.slide-bottom{
+        padding-left: 10%;
+        font-size: 1rem;
+        list-style: none; 
+        margin: 0; 
+    }
+    .slide-top li,.slide-bottom li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 39px;
+        z-index: 100;
+    }
+    
+    .navHome{
+        padding-top: 39px;
+        color: #AE0505;
+        z-index: 10;
+        position: relative;
+    }
+    .navEnter{
+        padding-top: 39px;
+    }
+    .navSlide-logo{
+        padding-right: 1rem;
+    }
+    .slide-highlight{
+        width: 100%;
+        height: 2.3rem;
+        background-color: white;
+        position: absolute;
+        left: 0px;
+        top:8.5%;
+        z-index: 0;
     }
 }
 

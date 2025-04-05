@@ -86,7 +86,11 @@
            <button><h6>want to sell or trade? Add a listing!</h6></button>
         </div>
     </div>
-    <div class="right"></div>
+    <div class="right">
+        <div class="right-top"></div>
+        <div class="right-bottom"></div>
+
+    </div>
 </div>
 </body>
 </html>
